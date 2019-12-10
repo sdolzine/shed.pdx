@@ -1,60 +1,256 @@
-/* Enter your Styles below! */
+@font-face {
+    font-family: 'stonewall_50-medium-web';
+    	src: url('../fonts/stonewall_50-medium-web.woff') format('woff');
+        }
 
 
 body { 
-	font-family: Helvetica, sans-serif;
-	font-size: 16px;
+	background-color: #514F31;
+
+
 	 }
 
 h1, h2, h3, h4 {
-	font-family: Helvetica, sans-serif;
+	font-family: stonewall_50-medium-web, sans-serif;
+	
+
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 400px;
+	color: #c4400c;
 }
 
 h2 {
-	font-size: 36px;
+	font-size: 100px;
+	color: #c4400c;
 }
 
-h3 {
-	font-size: 28px;
+h3 {font-family: stonewall_50-medium-web, sans-serif;
+	font-size: 100px;
+	line-height: 1.0
+	;
 }
 h4 {
 	font-size: 24px;
 }
 
-blockquote {
-	margin: 20px 60px;
-	font-family: Helvetica, sans-serif;
+
+header {
+	margin-right:30px;
+	margin-left:30px;
 }
 
-header {margin-bottom: 20px;}
+.descript { 
+
+	font-family:aktiv-grotesk, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #A59F59;
+	font-size: 1.41vw;
+	line-height: 1.688vw;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top:50px;
+ }
 
 /* ensures that your images stretch the width of their containers */
-img { width: 100%; }
 
-a { 
-	color: red;
-	text-decoration: none;
-	 }
-a:hover { color: black; }
 
-.grid {
+.about-grid {
+	display: grid;
+	
+	z-index: 3;
+	grid-template-columns: 50% 50%;
+	min-height: 500px;
+	grid-gap: 20px;
+	width: 100%;
+	
+	background: #514F31;
+	overflow-x: hidden;
+
+}
+
+.col-1 {
+	column-span: 1fr;
+	box-sizing: inherit;
+	display: block;
+	overflow: scroll;
+	overflow-x: hidden;
+
+}
+
+.col-2  {
+
+	background-image: url("../images/shed.jpeg");
+	background-repeat: no-repeat;
+	transform: rotate(90deg);
+	
+    background-size: cover;
+    background-position: center top;
+    width: calc(50% - 0.586vw);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+
+}
+
+
+
+.home-header {
+	margin-top:55px;
+}
+
+.home-nav {
+	font-family: stonewall_50-medium-web, sans-serif;
+	font-size: 100px;
+	line-height: 1.0;
+	margin-right:30px;
+	margin-left:30px;
+	position: relative;
+	z-index:1;
+	padding-top:600px;
+	padding-bottom:100px;
+}
+
+.left-nav {text-align: right;}
+
+.shed {
+	padding-right: 20px;
+	padding-top: 150px;
+	width: 95%;
+	position: fixed;
+  	top: 0;
+  	z-index: -99;
+
+}
+
+.foot-grid {
+
+	position: fixed;
+	z-index: 20;
+	bottom: 0;
+	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 40px;
-	width: 60%;
-	margin: auto;
+	background-color: #B29C76;
+	font-family: aktiv-grotesk, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: #514F31;
+	min-height:40px;
+	margin-top: 50px;
 }
 
-.grid div {
-	background-color: #ccc;
-	padding: 20px;
+.foot-nav-left {
+	padding-top:10px;
+	padding-left: 30px;
 }
-/*
-font-family: 'Mansalva', cursive;
-font-family: 'Dosis', sans-serif;
-font-family: 'Indie Flower', cursive;
-*/
+
+.foot-navright{
+	padding-top: 10px;
+	padding-right: 30px;
+	text-align: right;
+
+}
+
+/*About page*/
+
+.about-head {
+
+	text-align: center;
+	padding-top: 30px;
+}
+
+
+
+
+/* Override attributes */
+
+/* Links*/ 
+a.home-nav-scroll {text-decoration: none;
+color: #b3771a ;}
+a.home-nav-scroll:link {
+  text-decoration: none;
+  color: #b3771a ;
+}
+a.home-nav-scroll:visited {
+  text-decoration: none;
+  color: #b3771a ;
+}
+a.home-nav-scroll:hover {
+  text-decoration: none;
+  color: #c68126;
+}
+a.home-nav-scroll:active {
+  text-decoration: none;
+  color: #b3771a;
+}
+
+/*Scrollbar edits*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px;
+  border-radius: 0px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #58664a;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #414c34;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a08b47;
+}
+
+
+
+
+
+/* If the screen size is 600px or less, phones*/
+@media only screen and (max-width: 600px) {
+  .shed {max-width: 90%;
+  }
+  .home-header{
+  	font-size: 65px;
+  	text-align: center;
+
+  }
+  h3 {font-size: 65px;}
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	 .shed {max-width: 90%;
+  }
+
+.home-header{
+  	font-size: 90px;
+  }
+
+  h3 {font-size: 90px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ .shed {max-width: 95%;
+  }
+  .home-header{
+  	font-size: 110px;
+  }
+
+  h3 {font-size: 130px;
+
+}
+
+
+
+
+
